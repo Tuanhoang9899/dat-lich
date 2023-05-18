@@ -28,7 +28,7 @@ $(document).ready(function() {
       // Thực hiện cuộn mượt bằng cách lấy vị trí top của phần tử đích và đặt nó làm mục tiêu cuộn
       $('html, body').stop().animate({
         scrollTop: $(target).offset().top
-      }, 300, function() {
+      }, 600, function() {
         location.hash = target; // Gắn kết hash (#jumptarget) vào địa chỉ trang
       });
   
@@ -39,24 +39,24 @@ $(document).ready(function() {
     });
   });
 
-$(window).scroll(function() {
-    var scrollDistance = $(window).scrollTop();
+// $(window).scroll(function() {
+//     var scrollDistance = $(window).scrollTop();
 
-    // Show/hide menu on scroll
-    if (scrollDistance >= 850) {
-    		$('nav').fadeIn("fast");
-    } else {
-    		$('nav').fadeOut("fast");
-    }
+//     // Show/hide menu on scroll
+//     if (scrollDistance >= 850) {
+//     		$('nav').fadeIn("fast");
+//     } else {
+//     		$('nav').fadeOut("fast");
+//     }
 
-    // Assign active class to nav links while scolling
-    $('.staff_option').each(function(i) {
-            if ($(this).position().top <= scrollDistance) {
-                    $('.category_item.active').removeClass('active');
-                    $('.category_item').eq(i).addClass('active');
-            }
-    });
-}).scroll();
+//     // Assign active class to nav links while scolling
+//     $('.staff_option').each(function(i) {
+//             if ($(this).position().top <= scrollDistance) {
+//                     $('.category_item.active').removeClass('active');
+//                     $('.category_item').eq(i).addClass('active');
+//             }
+//     });
+// }).scroll();
 
 
     // $('.category_option .category_item[data-href*=#]').bind('click', function(e) {
@@ -72,3 +72,25 @@ $(window).scroll(function() {
     //     location.hash = target; // Gắn kết hash (#jumptarget) vào địa chỉ trang
     //   });
     // });
+
+
+    var scrollTimeout;
+$(window).scroll(function() {
+  clearTimeout(scrollTimeout);
+  scrollTimeout = setTimeout(function() {
+    var scrollDistance = $(window).scrollTop();
+
+    if (scrollDistance >= 850) {
+      $('nav').fadeIn("fast");
+    } else {
+      $('nav').fadeOut("fast");
+    }
+
+    $('.staff_option').each(function(i) {
+      if ($(this).position().top <= scrollDistance) {
+        $('.category_item.active').removeClass('active');
+        $('.category_item').eq(i).addClass('active');
+      }
+    });
+  }, 200); // Thời gian chờ giữa các lần xử lý (milliseconds)
+}).scroll();
