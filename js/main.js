@@ -74,23 +74,27 @@ $(document).ready(function() {
     // });
 
 
-    var scrollTimeout;
-$(window).scroll(function() {
-  clearTimeout(scrollTimeout);
-  scrollTimeout = setTimeout(function() {
-    var scrollDistance = $(window).scrollTop();
-
-    if (scrollDistance >= 850) {
-      $('nav').fadeIn("fast");
-    } else {
-      $('nav').fadeOut("fast");
-    }
-
-    $('.staff_option').each(function(i) {
-      if ($(this).position().top <= scrollDistance) {
-        $('.category_item.active').removeClass('active');
-        $('.category_item').eq(i).addClass('active');
+    var isScrolling = false;
+    $(window).scroll(function() {
+      if (!isScrolling) {
+        isScrolling = true;
+        requestAnimationFrame(function() {
+          var scrollDistance = $(window).scrollTop();
+    
+          if (scrollDistance >= 850) {
+            $('nav').fadeIn("fast");
+          } else {
+            $('nav').fadeOut("fast");
+          }
+    
+          $('.staff_option').each(function(i) {
+            if ($(this).position().top <= scrollDistance) {
+              $('.category_item.active').removeClass('active');
+              $('.category_item').eq(i).addClass('active');
+            }
+          });
+    
+          isScrolling = false;
+        });
       }
-    });
-  }, 200); // Thời gian chờ giữa các lần xử lý (milliseconds)
-}).scroll();
+    }).scroll();
