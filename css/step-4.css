@@ -1,0 +1,94 @@
+
+@media (max-width: 767px){
+    header {
+        height: 100px;
+        z-index: 999;
+    }
+    i.fas.fa-chevron-left.come-back {
+        left: 3%;
+    }
+    header .title {
+        padding-left: 30px;
+        margin-top: 0;
+    }
+    .category-mb{
+        display: block ;
+    }
+    .category{
+        display: none !important;
+    }
+    section.card_pay {
+        top: 100px;
+    }
+    .option-mb.col-lg-12.col-md-12.col-xs-12.col-sm-12 {
+        background: #fff;
+        position: relative;
+        z-index: 99;
+        top: 25px;
+        border-radius: 8px;
+        box-shadow: rgba(16,25,40,.08) 0px 4px 8px 0px;
+        overflow: hidden;
+    }
+    
+    .list_staff {}
+    
+    form.contact-form {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px 5px;
+    }
+    
+    input#number {
+        outline: none;
+        width: 100%;
+        height: 40px;
+        padding: 5px 15px;
+        border: 1px solid #eee;
+        border-radius: 5px;
+    }
+    
+    
+    
+    input {
+        outline: none;
+        width: 100%;
+        height: 40px;
+        padding: 5px 15px;
+        border: 1px solid #eee;
+        border-radius: 5px;
+    }
+    
+    input#address {
+        outline: none;
+        width: 100%;
+        height: 40px;
+        padding: 5px 15px !important;
+        border: 1px solid #eee;
+        border-radius: 5px;
+        height: 55px;
+    }
+    
+    input#note {
+        outline: none;
+        width: 100%;
+        height: 40px;
+        padding: 5px 15px;
+        border: 1px solid #eee;
+        border-radius: 5px;
+        height: 80px;
+    }
+    
+    .input {
+        margin-bottom: 10px;
+    }
+}
+@media (min-width: 767px) {
+    .category-mb{
+        display: none !important;
+    }
+    .category{
+        display: block;
+    }
+}
+
+
