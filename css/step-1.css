@@ -1,0 +1,62 @@
+@media (min-width: 1200px) {
+    .container {
+        padding: 0px 58px !important;
+        max-width: 960px !important;
+    }
+  }
+  body{
+    font-family: "Roobert PRO",sans-serif;
+    background: #f2f2f2;
+  }
+button.owl-next {
+    position: absolute;
+    right: 50px;
+    top: 10px;
+}
+
+button.owl-prev {
+    position: absolute;
+    left: 50px;
+    top: 10px;
+}
+@media(max-width:768px){
+    header .title {
+        margin-top: 0;
+    }
+    .container{
+        max-width: 100% !important;
+    }
+    section.book_salon .information_book .bot {
+        top: 20px;
+    }
+    .category_item {
+        padding: 0px 16px;
+        border-radius: 16px;
+    }
+    .category_option .owl-nav {
+        display: block;
+    }
+    button.owl-next {
+        right: 0;
+        top: -5px;
+    }
+    button.owl-prev {
+        left: 0;
+        top: -5px;
+        position: absolute;
+    }
+    i.fas.fa-chevron-left, i.fas.fa-chevron-right {
+        color: #fff !important; 
+    }
+    section.book_salon .left {
+        top: 110px;
+    }
+    .option {
+        top: calc(env(safe-area-inset-top) + 120px);
+    }
+}
+@media (min-width:768px) {
+    i.fas.fa-chevron-left, i.fas.fa-chevron-right {
+        color: #000;
+    }
+}

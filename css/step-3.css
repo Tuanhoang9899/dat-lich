@@ -1,0 +1,200 @@
+@media (min-width: 1200px) {
+    .container {
+        padding: 0px 58px !important;
+        max-width: 960px !important;
+    }
+  }
+  body{
+    font-family: "Roobert PRO",sans-serif;
+    background: #f2f2f2;
+  }
+section#date_time .category_option {
+    border-radius: 8px 8px 0 0;
+    display: flex;
+    position: relative;
+    -webkit-box-align: center;
+    padding: 15px 0px 0px;
+    justify-content: space-around;
+    height: 135px;
+    align-items: flex-start;
+    align-items: center;
+}
+.category_option .day-container {
+    flex-direction: column-reverse;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    outline: none;
+    background: none;
+    border: 1px solid rgb(213, 215, 218);
+    border-radius: 4px;
+    height: 64px;
+    width: 64px;
+    padding: 12px 16px;
+    cursor: pointer;
+    transition: background-color 300ms ease 0s;
+}
+
+
+
+#calendar .owl-stage .owl-item:nth-child(2) .day-container{
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    outline: none;
+    background: none;
+    border: 1px solid rgb(213, 215, 218);
+    border-radius: 4px;
+    height: 64px;
+    width: 64px;
+    padding: 12px 16px;
+    cursor: pointer;
+    transition: background-color 300ms ease 0s;
+    border-color: rgb(3, 122, 255);
+    background: rgb(3, 122, 255);
+    color: white;
+}
+
+.category_option .owl-nav {
+    width: 100%;
+    position: absolute;
+    top: -26px;
+    display: flex;
+    justify-content: space-between;
+    right: 0;
+}
+.category_option .owl-nav button {
+    background: none !important;
+    outline: none;
+}
+button.owl-prev {
+    position: absolute;
+    left: -25px;
+    top: 65px;
+}
+.category_option{
+    top: 0;
+}
+
+
+.owl-stage-outer {
+    width: 400px;
+}
+.category_item_1.category_item.active {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    outline: none;
+    background: none;
+    border: 1px solid rgb(213, 215, 218);
+    border-radius: 4px;
+    height: 64px;
+    width: 64px;
+    padding: 12px 16px;
+    cursor: pointer;
+    transition: background-color 300ms ease 0s;
+    border-color: rgb(3, 122, 255);
+    background: rgb(3, 122, 255);
+}
+.category_option .owl-stage {
+    justify-content: start;
+}
+.owl-item.active {
+    width: 64px !important;
+}
+.category_item_2.category_item {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    outline: none;
+    background: none;
+    border: 1px solid rgb(213, 215, 218);
+    border-radius: 4px;
+    height: 64px;
+    width: 64px;
+    padding: 12px 16px;
+    cursor: pointer;
+    transition: background-color 300ms ease 0s;
+}
+button.owl-next {
+    right: -25px;
+    position: absolute;
+    top: 65px;
+}
+@media(max-width:768px){
+    section#date_time .left .option {
+        position: sticky;
+        z-index: 9999;
+        top: calc(env(safe-area-inset-top) + 100px);
+        background: #fff;
+    }
+    section#date_time .category_option{
+        position: unset;
+    }
+    .container{
+        max-width: 100% !important;
+    }
+    #date_time .left .staff_option{
+        top: 0;
+    }
+    header {
+        height: 100px;
+    }
+    i.fas.fa-chevron-left.come-back{
+        left: 3%;
+    }
+    header .title {
+        margin-top: 0;
+        padding-left: 30px;
+    }
+    section#date_time .left {
+        top: 100px;
+    }
+    section#date_time .category_option{
+        padding-top: 10px;
+    }
+    
+    section.book_salon .left h2 {
+        position: absolute;
+        left: 86px;
+        top: -20px;
+    }
+    .category_option .owl-nav {
+        display: block;
+    }
+    .category_item_2.category_item a span {
+        color: #000;
+    }
+    .owl-theme .owl-nav {
+        display: none;
+    }
+    section.book_salon .left h2 {
+        position: absolute;
+        left: 10px;
+        top: -20px;
+    }
+    section#date_time .category_option {
+    padding-left: 80px;
+}
+}
+
+.category_item_2.category_item:hover {
+    border-color: rgb(3, 122, 255);
+}
+.date {
+    height: 135px;
+}
+
+#calendar h2.month-title {
+    font-size: 18px;
+    width: min-content;
+  }
