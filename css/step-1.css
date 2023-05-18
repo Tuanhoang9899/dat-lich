@@ -33,9 +33,7 @@ button.owl-prev {
         padding: 0px 16px;
         border-radius: 16px;
     }
-    .category_option .owl-nav {
-        display: block;
-    }
+
     button.owl-next {
         right: 0;
         top: -5px;
