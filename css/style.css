@@ -675,9 +675,9 @@ section.card_pay .pay .button.submit span{
   header .title{
       margin-top: 50px;
   }
-  .category_option .owl-nav{
+  /* .category_option .owl-nav{
       display: none;
-  }
+  } */
   .category_option{
       top: -5px;
       background: none;
